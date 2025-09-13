@@ -1,0 +1,48 @@
+body {
+    overflow: hidden;
+}
+
+#main-title {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#game-area {
+    display: flex;
+    height: 85vh;
+}
+
+#player-one {
+    position: absolute;
+    border: 2px black solid;
+    height: 100px;
+    pointer-events: none;
+}
+
+#ball {
+    display: inline;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#ai{
+    position: absolute;
+    border: 2px black solid;
+    height: 100px;
+    pointer-events: none;
+    margin-left: 99%;
+    animation: aiMovement 0.5s linear infinite alternate;
+}
+
+@keyframes aiMovement {
+    from {
+        top: 0
+    }
+
+    to {
+        top:calc(100vh - 100px);
+    }
+}
